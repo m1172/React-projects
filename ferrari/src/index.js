@@ -1,12 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Body from './Body/body';
+import Sidebar from './Sidebar/sidebar';
+import Navbar from './Navbar/navbar';
+import Card from './Card/card';
+
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div className='container'>
+      <Sidebar className='sidebar'/>
+      <Body className='body'>
+        <Navbar/>
+        <Sidebar/>
+      </Body>
+      
+     
+      
+    </div>
+
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

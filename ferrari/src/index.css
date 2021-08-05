@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    /* width: fit-content; */
+}
+
+
+.sidebar , .body{
+    border: 2px solid red;
+}
+.sidebar{
+    flex: 1;
+}
+.body{
+    flex: 3;
+}

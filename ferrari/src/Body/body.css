@@ -1,0 +1,79 @@
+.body{
+    flex: 5;
+    background: #FBFCFF;
+}
+.inputs{
+    margin: 24px 61px 24px 45px;
+}
+.input{
+    display: flex;
+    align-items: center;
+}
+input{
+   margin-right: 34px;
+width: 517px;
+height: 50px;
+background: #FFFFFF;
+border: 1px solid #E7E7E7;
+box-sizing: border-box;
+border-radius: 5px;
+}
+.fa-search{
+    position: absolute;
+    width: 18.75px;
+    height: 18.75px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+#sel{
+    width: 310px;
+height: 50px;
+
+
+background: #FFFFFF;
+border: 1px solid #E7E7E7;
+box-sizing: border-box;
+border-radius: 5px;
+margin-right: 76px;
+}
+.rasm{
+    border-radius: 50%;
+}
+.fa-user, .fa-bell{
+    font-size: 20px;
+}
+.fa-user{
+    margin: 0 40px 0 43px;
+}
+hr{
+    color: cornsilk;
+}
+.photos{
+    margin: 46px 115px 100px 115px;
+    box-shadow: 20px 100px 80px  rgba(41, 72, 152, 0.05), 0px 64.8148px 46.8519px rgba(41, 72, 152, 0.037963), 0px 38.5185px 25.4815px rgba(41, 72, 152, 0.0303704), 0px 20px 13px rgba(41, 72, 152, 0.025), 0px 8.14815px 6.51852px rgba(41, 72, 152, 0.0196296), 0px 1.85185px 3.14815px rgba(41, 72, 152, 0.012037);
+    border-radius: 10px;
+}
+.arrow{
+    box-shadow: 0px 100px 80px rgba(41, 72, 152, 0.05), 0px 64.8148px 46.8519px rgba(41, 72, 152, 0.037963), 0px 38.5185px 25.4815px rgba(41, 72, 152, 0.0303704), 0px 20px 13px rgba(41, 72, 152, 0.025), 0px 8.14815px 6.51852px rgba(41, 72, 152, 0.0196296), 0px 1.85185px 3.14815px rgba(41, 72, 152, 0.012037);
+    border-radius: 10px;
+}
+span{
+    font-family: Gilroy-Light;
+    font-size: 48px;
+    line-height: 56px;
+    margin-left: 100px;
+    color: #000000;
+    margin-right: 170px;
+}
+sup{
+    font-size: 16px;
+}
+.car{
+    margin-left: 75px;
+    margin-bottom: 20px;
+}
+.graph{
+    margin-left: 65px;
+    box-shadow: 0px 100px 80px rgba(41, 72, 152, 0.05), 0px 64.8148px 46.8519px rgba(41, 72, 152, 0.037963), 0px 38.5185px 25.4815px rgba(41, 72, 152, 0.0303704), 0px 20px 13px rgba(41, 72, 152, 0.025), 0px 8.14815px 6.51852px rgba(41, 72, 152, 0.0196296), 0px 1.85185px 3.14815px rgba(41, 72, 152, 0.012037);
+    border-radius: 10px;
+}
