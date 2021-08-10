@@ -1,4 +1,4 @@
-import './App.css';
+
 import Table from './table.jsx';
 
 function App() {
