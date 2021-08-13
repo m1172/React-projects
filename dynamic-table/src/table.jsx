@@ -6,7 +6,18 @@ export default class Table extends Component{
     constructor(props){
         super(props)
         this.state= {
-            datas : getdata()
+            name: '',
+            status: '',
+            editName: '',
+            editStatus: '',
+            selected: null,
+            data: [
+                {id: 1, name: 'Jumanazar', status: 'low'},
+                {id: 2, name: 'Ali', status: 'Medium'},
+                {id: 3, name: 'Jack', status: 'High'},
+                {id: 4, name: 'George', status: 'Low'},
+                
+            ]
         }
     };
 
