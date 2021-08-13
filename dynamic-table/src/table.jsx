@@ -16,17 +16,28 @@ export default class Table extends Component{
                 {id: 2, name: 'Ali', status: 'Medium'},
                 {id: 3, name: 'Jack', status: 'High'},
                 {id: 4, name: 'George', status: 'Low'},
-                
             ]
         }
     };
-
-    delete= (value) => {
-        const {id} = value;
-        const datas= this.state.datas.filter((value) => value.id !== id);
-        this.setState({datas});
-    };
         render(){
+            const onDelete = (id) =>{
+                console.log('deleted', id);
+
+                const newData = this.state.data.filter((value) => value.id !==id);
+                this.setState({data: newData});
+            };
+            cosnt onAdd = () => {
+                console.log(this.state.name, this.state.status);
+                cosnt newData = [
+                    ...this.state.data,
+                    {
+                        id: this.state.data.length + 1,
+                        name: this.state.name,
+                        status: this.state.status, 
+                    },
+                ];
+                this.setState({data: newData});
+            }
             return(
                 <div>
                     <table>
