@@ -37,6 +37,20 @@ export default class Table extends Component{
                     },
                 ];
                 this.setState({data: newData});
+            };
+
+            const onChangeName = (e) => {
+                this.setState({name: e.target.value});
+            };
+            const onChangeStatus = (e) => {
+                this.setState({ status: e.target.value});
+            };
+            const onEdit = (value) => {
+                this.setState({
+                    selected: value.id,
+                    editName: value.name,
+                    editStatus: value.status,
+                });
             }
             return(
                 <div>
