@@ -26,9 +26,9 @@ export default class Table extends Component{
                 const newData = this.state.data.filter((value) => value.id !==id);
                 this.setState({data: newData});
             };
-            cosnt onAdd = () => {
+            const onAdd = () => {
                 console.log(this.state.name, this.state.status);
-                cosnt newData = [
+                const newData = [
                     ...this.state.data,
                     {
                         id: this.state.data.length + 1,
@@ -110,10 +110,12 @@ export default class Table extends Component{
                                         <td>
                                             {this.state.selected === value.id ? (
                                                 <button onClick={onSave}>save</button>
+                                            ): (
+                                                <button onClick={() => onEdit(value)}>edit</button>
                                             )}
                                         </td>
                                     </tr>
-                                )
+                                );
                             })}
                         </tbody>
                       </table>
