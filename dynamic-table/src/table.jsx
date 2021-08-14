@@ -51,46 +51,73 @@ export default class Table extends Component{
                     editName: value.name,
                     editStatus: value.status,
                 });
-            }
+            };
+            cosnt onSave =() => {
+                this.setState({editName: e.target.value});
+            };
+            const onEditName =(e) => {
+                this.setState({editName: e.target.value});
+            };
+            const onEditStatus =(e) => {
+                this.setState({editStatus: e.target.value});
+            };
             return(
                 <div>
-                    <table>
-
-                        <tr>
-                        <th>No</th>
-                        <th>Name</th>
-                        <th>Level</th>
-                        
-                        </tr>
-                        <tr>
-                            <td>0</td>
-                            <td><input type="text" /></td>
-                            <td><input type="text" /></td>
-                            <td><button>Save</button></td>
-                            <td><button>Delete</button></td>
-                        </tr>
-                        {
-                            this.state.datas.map((value, index)=>{
-                                    return(<div>
-                        <tr key={value.id}>
-                           
-                            <td>{value.id}</td>
-                            <td>{value.name}</td>
-                            <td>{value.job}</td>
-                            <td>
-                               <button className='bt'>Edit</button>
-                                </td>
-                            <td> 
-                                <button className='btn' onClick={() => this.delete(value)}>
-                                    Delete</button>
-                                </td>
-                        
-                        </tr>
-                        </div>
-                            )
-                                })
-                            }
-                    </table>
+                    <h1>seleted: {this.state.selected}</h1>
+                    <input onchange={onChangeName} placeholder='name' type="text" />
+                    <input onChange={onChangeStatus} placeholder='status' type="text" />
+                    <button onClick={onAdd}>add</button>
+                      <table border='1' style={{borderCollapse: 'collapse'}}>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th>action</th>
+                                <th>action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.state.data.map((value) => {
+                                return (
+                                    <tr key={value.id}>
+                                        <td>{value.id}</td>
+                                        <td>
+                                            {this.state.selected === value.id ? (
+                                                <input
+                                                onChange={onEditName}
+                                                type='text'
+                                                value={this.state.editName}
+                                                />
+                                            ) : (
+                                                value.name
+                                            )}
+                                        </td>
+                                        <td>
+                                            {this.state.selected === value.id ? (
+                                                <input 
+                                                 onChange={onEditStatus}
+                                                 type="text"
+                                                 value={this.state.editStatus}
+                                                 />
+                                            ):(
+                                                value.status
+                                            )}
+                                        </td>
+                                        <td>
+                                            <button onClick={()=> onDelete(value.id)}>delete</button>
+                                        </td>
+                                        <td>
+                                            {this.state.selected === value.id ? (
+                                                <button onClick={onSave}>save</button>
+                                            )}
+                                        </td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                      </table>
+                    
                 </div>
             );
         }
