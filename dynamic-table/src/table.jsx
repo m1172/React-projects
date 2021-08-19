@@ -52,7 +52,7 @@ export default class Table extends Component{
                     editStatus: value.status,
                 });
             };
-            cosnt onSave =() => {
+            const onSave =() => {
                 this.setState({editName: e.target.value});
             };
             const onEditName =(e) => {
