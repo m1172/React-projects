@@ -28,6 +28,11 @@ export default class App extends Component {
         return (
             <div className='wrapper'>
                 <input type="text" onChange={onSearch} />
+                <select name="" id="">
+                    <option value="">id</option>
+                    <option value="">name</option>
+                    <option value="">status</option>
+                </select>
                 <table 
                     border='1'
                     style={{borderCollapse: 'collapse', width: '400px' }}

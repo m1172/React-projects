@@ -8,4 +8,4 @@ export const data =  [
     { id: 7, name: 'Mirshakar', status: 'low'},
     { id: 8, name: 'Shakartoy', status: 'medium'},
     { id: 9, name: 'Shakarbek', status: 'high'},
-],
+]
