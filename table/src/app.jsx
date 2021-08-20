@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {data} from './mock'
 import './App.css'
 
 export default class App extends Component {
@@ -18,7 +19,7 @@ export default class App extends Component {
     render() {
         const onSearch = (e) => {
             this.setState({search: e.target.value});
-            const newData =this.state.list.filter((value) => {
+            const newData =data.filter((value) => {
                 let list =value.name.toLowerCase();
                 return list.includes(e.target.value.toLowerCase());
             });
