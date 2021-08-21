@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import {data} from './mock'
+import {data} from './mock';
+// import Order from './o'
 
 export default class App extends Component {
     state = {
         name: '',
         pw: '',
+        select: 'id',
+        data: data,
     };
     render() {
         const onChange = (e) => {
@@ -13,11 +16,14 @@ export default class App extends Component {
                     let name = value[this.state.select].toString().toLocaleLowerCase();
                     return name.includes(e.target.value.toLocaleLowercase());
                 } else{
-                    let name = value[this.sstate.slelect].toLocaleLowerCase();
+                    let name = value[this.state.select].toLocaleLowerCase();
                     return name.includes(e.target.value.toLocaleLowerCase());
                 }
             });
            this.setState({[e.target.name]: e.target.value, data: list});
+        };
+        const onSelect =(e) => {
+            this.setState({ select: e.target.value});
         };
         return (
             <div className='wrapper'>
@@ -26,8 +32,31 @@ export default class App extends Component {
                     <h1>Password: {this.state.pw}</h1>
                 </div>
                 <input name='name' placeholder='username' type="text" onChange={onChange} />
-                <input name='pw' placeholder='password' type="text" onChange={onChange}/>
-                <input type="submit"  value='submit' />
+                <select name="" id="" onChange={onSelect}>
+                    <option value="id">id</option>
+                    <option value="name">name</option>
+                    <option value="status">status</option>
+                </select>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Name</td>
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.state.data.map((value) => {
+                            return (
+                                <tr>
+                                    <td>{value.id}</td>
+                                    <td>{value.name}</td>
+                                    <td>{value.status}</td>
+                                </tr>
+                            );
+                        })}
+                    </tbody>
+                </table>
             </div>
         )
     }
