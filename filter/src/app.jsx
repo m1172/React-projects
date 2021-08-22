@@ -14,6 +14,7 @@ export default class App extends Component {
       this.setState({ input: e.target.value });
       let res = data[this.state.select].toString().toLocaleLowerCase();
       const list = data.filter((value) => {
+        res.includes(e.target.value);
         // if (Number.isInteger(value[this.state.select])) {
         //   let name = value[this.state.select].toString().toLocaleLowerCase();
         //   return name.includes(e.target.value.toLocaleLowercase());
